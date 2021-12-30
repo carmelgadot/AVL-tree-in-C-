@@ -166,7 +166,7 @@ class AVL {
      * @param cur pointer to node to make iterator from it that node
      * is the root
      */
-     Iterator (AVL::node *cur)
+    Iterator (AVL::node *cur)
         : cur (cur)
     {
       stack.push (cur);
@@ -304,7 +304,7 @@ class AVL {
      * @param cur pointer to node to make const iterator from it that node
      * is the root
      */
-     ConstIterator (node *cur)
+    ConstIterator (node *cur)
         : cur (cur)
     {
       stack.push (cur);
@@ -314,7 +314,7 @@ class AVL {
      * Constructor.
      * @param it iterator obj to make const iterator from it
      */
-     ConstIterator (const Iterator &it) : cur (it.cur)
+    ConstIterator (const Iterator &it) : cur (it.cur)
     {}
 
     /**

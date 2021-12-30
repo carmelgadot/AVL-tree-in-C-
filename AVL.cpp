@@ -358,17 +358,7 @@ AVL::node *helper_find (const Apartment &data, AVL::node *curr_node)
 AVL::iterator AVL::find (const Apartment &data)
 {
 
-  AVL::node *node_apt = helper_find (data, _root);
-  if (node_apt == nullptr)
-    {
-      AVL::iterator itr (nullptr);
-      return itr;
-    }
-  AVL::iterator itr (_root);
-  while (!(*itr == node_apt->data_))
-    {
-      itr++;
-    }
+  AVL::iterator itr (helper_find (data, _root));
   return itr;
 
 }
@@ -382,17 +372,8 @@ AVL::iterator AVL::find (const Apartment &data)
  */
 AVL::const_iterator AVL::find (const Apartment &data) const
 {
-  AVL::node *node_apt = helper_find (data, _root);
-  if (node_apt == nullptr)
-    {
-      AVL::const_iterator c_itr (nullptr);
-      return c_itr;
-    }
-  AVL::const_iterator c_itr (_root);
-  while (!(*c_itr == node_apt->data_))
-    {
-      c_itr++;
-    }
+
+  AVL::const_iterator c_itr (helper_find (data, _root));
   return c_itr;
 
 }
