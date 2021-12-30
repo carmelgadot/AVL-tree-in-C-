@@ -65,7 +65,7 @@ double Apartment::get_distance_from_feelbox (double point_x, double point_y)
 {
   double x = point_x - X_FEEL_BOX;
   double y = point_y - Y_FEEL_BOX;
-  double distance = sqrt (x * x + y * y);
+  double distance = std::sqrt (x * x + y * y);
   return distance;
 }
 
@@ -77,8 +77,8 @@ double Apartment::get_distance_from_feelbox (double point_x, double point_y)
  */
 bool Apartment::operator== (const Apartment &other) const
 {
-  return (abs (_x - other._x) <= EPSILON &&
-          abs (_y - other._y) <= EPSILON);
+  return ((std::abs (_x - other._x) <= EPSILON) &&
+          (std::abs (_y - other._y) <= EPSILON));
 
 }
 

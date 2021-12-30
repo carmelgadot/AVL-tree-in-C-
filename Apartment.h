@@ -7,7 +7,7 @@
 #define COMMA ","
 #define LEFT_PARENTHESIS "("
 #define RIGHT_PARENTHESIS ")"
-
+#include <cmath>
 #include <iostream>
 
 /**
