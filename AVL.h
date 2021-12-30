@@ -167,7 +167,7 @@ class AVL {
      * is the root
      */
      Iterator (AVL::node *cur)
-        : cur (cur), stack (std::stack<node *> ())
+        : cur (cur)
     {
       stack.push (cur);
     }
@@ -305,7 +305,7 @@ class AVL {
      * is the root
      */
      ConstIterator (node *cur)
-        : cur (cur), stack (std::stack<node *> ())
+        : cur (cur)
     {
       stack.push (cur);
     }
