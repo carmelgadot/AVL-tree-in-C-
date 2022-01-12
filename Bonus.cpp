@@ -2,6 +2,21 @@
 #define Y 35.18577781093502
 #define X 31.81428051893798
 #include "MesureTimeHelper.h"
+#include <vector>
+#include <cstddef>
+#include <unordered_set>
+#include <string>
+#include <chrono>
+#include <iostream>
+#include <ostream>
+#include <fstream>
+#include "Apartment.h"
+#include "AVL.h"
+#include "Stack.h"
+#include <sstream>
+#include "Find.h"
+#include <iostream>
+#include <unordered_set>
 
 void insertion_stack (Stack stack,
                       std::vector<std::pair<double, double>> vector)
